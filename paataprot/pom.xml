@@ -8,11 +8,94 @@
 	<name>Paatashaala prototype</name>
 	<description>School collaboration platform</description>
 	<url>https://github.com/tharagit/Paatashaala</url>
-
-	<issueManagement>
+	<packaging>war</packaging>
+	
+<repositories>
+		<repository>
+			<id>prime-repo</id>
+			<name>Prime Repo</name>
+			<url>http://repository.primefaces.org</url>
+		</repository>
+	</repositories>
+ 
+	<dependencies>
+ 
+		<!-- PrimeFaces -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>3.3</version>
+		</dependency>
+ 
+		<!-- JSF 2 -->
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>2.1.11</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>2.1.11</version>
+		</dependency>
+ 
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+ 
+		<!-- <dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency> -->
+ 
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.1</version>
+		</dependency>
+ 
+		<!-- EL -->
+		<dependency>
+			<groupId>org.glassfish.web</groupId>
+			<artifactId>el-impl</artifactId>
+			<version>2.2</version>
+		</dependency>
+ 
+		<!-- Tomcat 6 need this 
+		<dependency>
+			<groupId>com.sun.el</groupId>
+			<artifactId>el-ri</artifactId>
+			<version>1.0</version>
+		</dependency>
+		-->
+ 
+ 		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.8</version>
+			<scope>test</scope>
+		</dependency>
+ 
+ <!-- <dependency>
+        <groupId>javax.faces</groupId>
+        <artifactId>jsf-api</artifactId>
+        <version>1.2-b19</version>
+    </dependency>
+  -->   
+  
+  <!-- <dependency>
+        <groupId>javax.faces</groupId>
+        <artifactId>jsf-impl</artifactId>
+        <version>1.2-b19</version>
+    </dependency> -->
+	</dependencies>
+	<!-- <issueManagement>
 		<url>https://github.com/tharagit/Paatashaala/issues</url>
 		<system>GitHub Issues</system>
-	</issueManagement>
+	</issueManagement> -->
 
 	<licenses>
 		<license>
@@ -22,20 +105,22 @@
 		</license>
 	</licenses>
 
-	<scm>
+	<!-- <scm>
 		<url>https://github.com/tharagit/Paatashaala</url>
 		<connection>scm:git:git://github.com/Paatashaala/paatashaala.git</connection>
 		<developerConnection>scm:git:git@github.com:tharagit/paatashaala.git</developerConnection>
 	</scm>
+ -->
 
-	<developers>
+
+	<!-- <developers>
 		<developer>
 			<email>thara.subramoni@gmail.com</email>
 			<name>Thara S</name>
 			<url>https://github.com/tharagit</url>
 			<id>thara.subramoni</id>
 		</developer>
-	</developers>
+	</developers> -->
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -43,7 +128,7 @@
 
 	<build>
 		<plugins>
-			<plugin>
+		<!-- 	<plugin>
 				<groupId>com.github.github</groupId>
 				<artifactId>downloads-maven-plugin</artifactId>
 				<version>0.6</version>
@@ -78,7 +163,7 @@
 						<phase>site</phase>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-site-plugin</artifactId>
@@ -156,13 +241,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.8</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
 </project>
